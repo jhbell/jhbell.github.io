@@ -6,7 +6,7 @@ categories: blog tutorial
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 
-     style="width: 200px; height: 200px;" />
+     style="width: 200px; height: 200px; padding-bottom: 25px" />  
 Welcome! I made this blog so I could post some of the things I learn on my 
 journey through the field of computer science. I have been doing some work
 outside of school lately, requiring me to solve some problems that there aren't 
