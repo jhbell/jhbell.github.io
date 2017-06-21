@@ -23,7 +23,7 @@ permalink: /:title
 github_username: jhbell
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 theme: minima
 gems:
   - jekyll-feed
