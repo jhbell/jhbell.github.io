@@ -11,6 +11,13 @@ little about what I learned. This will be the first part of a few posts that
 will walk through one way I have found to use CMake in a logical, and helpful
 manner.
 
+# Rationale
+
+There are plenty of people that talk about CMake, but when I was learning how
+to use it I struggled to find a *free*, cohesive source on building projects 
+with CMake. This post is my attempt to create some helpful information on 
+getting started with CMake, and some clean ways I have discovered to use it.
+
 # What is CMake?
 
 Well, according to their [website][cmake]:
@@ -50,6 +57,9 @@ make building and, even testing, a breeze and has some pretty sweet features.
 
 # Basic CMake Usage
 
+The complete source code for the following HelloSimple program can be found in 
+my GitHub repository: [http://github.com/jhbell/cmake-wyntk][cmake-wyntk]
+
 CMake is run using files called `CMakeLists.txt`. Inside of these files is
 where you will specify the configuration options that you would normally use
 in a Makefile. Furthermore, CMake allows for the use of multiple 
@@ -57,7 +67,7 @@ in a Makefile. Furthermore, CMake allows for the use of multiple
 _the simplest CMake project you can make_.
 
 ```
-HelloWorld
+HelloSimple
 |-- CMakeLists.txt
 |-- Hello.cpp
 |-- Hello.h
@@ -68,7 +78,7 @@ Imagine that `RunHello.cpp` uses `Hello.h` and `Hello.cpp` to print "Hello,
 world!" to standard output. We have written the code necessary to do so, and
 now we are ready to compile our program.
 
-We will start by creating our `CMakeLists.txt` file containing the follwing
+We will start by creating our `CMakeLists.txt` file containing the following
 lines:
 
 ```cmake
@@ -90,7 +100,7 @@ cmake_minimum_required(VERSION 3.5)
 As you can imagine, here we define the *minimum required version of CMake* we
 need to build this project as version 3.5. Again, as you would think, you can 
 change the version number (here 3.5) to be whatever version you need to support 
-the cmake commands you will be using.
+the CMake commands you will be using.
 
 ```cmake
 project(HelloSimple CXX)
@@ -121,11 +131,82 @@ gcc/g++) and the *list of source files to compile*. Here we are naming the
 executable RunHello, and compiling the .cpp files `RunHello.cpp` and 
 `Hello.cpp` for the HelloSimple program.
 
-# Running CMake
+# Building and Running with CMake
+
+Building your CMake project is now quite simple. Again, there are various ways
+to accomplish this task, but the following is what I have found to be easiest
+to remember.
+
+1. *Make a new directory* inside of your project folder. I, personally, like
+using the name `build` for this. Once this is done, the directory structure
+from before should look like this:
+
+```
+HelloSimple
+|-- build/              <= New!
+|-- CMakeLists.txt
+|-- Hello.cpp
+|-- Hello.h
+|-- RunHello.cpp
+```
+
+2. *Change directories* into the newly created directory.
+
+3. *Execute the command `cmake ..`.* The CMake command line tool simply
+requires a path to the project source, or a path to a previous build. We
+obviously don't have a previous build, so we want to pass in the root directory
+for our project containing our highest level `CMakeLists.txt` file. This just
+so happens to be `..`.
+
+4. *Run make* in the build directory. The `cmake` command generates a 
+`Makefile` into your current directory. You will also notice a file called 
+`CMakeCache.txt` and a directory called `CMakeFiles`. The `CMakeCache.txt` file 
+is an editable file containing some defaults for your program's build process.
+You can open this file to learn more about it. The `CMakeFiles` directory 
+contains all of the sorcery done by CMake along with the binaries for
+each source file.
+
+5. *Run your program* as you normally would after a make. In this example, 
+I simply have to type `./RunHello` since RunHello is the name I gave to my
+executable using the `add_exectuable()` command above.
+
+From here on out, to recompile your program, you simply need to run `make`
+again. Only after making changes to the CMakeLists.txt file do you need to
+run the `cmake` command again.
+
+In summary, the commands to execute this build process from the HelloSimple
+directory are:
+
+```
+mkdir build
+cd build
+cmake ..
+make
+./RunHello
+```
+
+# Closing Remarks
+
+As you can see, there is a lot to learn about CMake. Similar to using an IDE,
+the more you let the software do, the less you know about what is actually
+going on. If you want a platform independent build process, look no further, 
+this is about as simple as you can get. CMake is growing in popularity and is
+even the basis for JetBrains' [CLion][clion] IDE. If you already have a ton of 
+Makefiles that do exactly what you want, however, maybe switching your entire 
+project over to CMake isn't necessary.
+
+In some future posts, I will go over creating more elaborate
+project setups with CMake where we will begin to see some of the features that
+makes CMake much easier to use than Makefiles. As we have already seen, we can
+use CMake to generate a fully equipped Makefile with just four commands. The
+future posts will go into more complex directory structures, including
+libraries, and testing with GoogleTest. Until then, happy hacking!
 
 
 [cmake]:          https://cmake.org
 [cmake-tutorial]: https://cmake.org/cmake-tutorial/
 [cmake-commands]: https://cmake.org/cmake/help/v3.8/manual/cmake-commands.7.html
+[clion]:          https://www.jetbrains.com/clion/
 
+[cmake-wyntk]:  https://github.com/jhbell/cmake-wyntk
 [last-post]:    {{ site.baseurl }}{% post_url 2017-06-11-welcome-to-my-blog %}
