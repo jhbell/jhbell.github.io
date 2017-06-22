@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "CMake: What You Need to Know - Part 1"
+date:   2017-06-22 10:52:34 -500
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 
@@ -97,17 +98,17 @@ starting with the first line:
 cmake_minimum_required(VERSION 3.5)
 ```
 
-As you can imagine, here we define the *minimum required version of CMake* we
-need to build this project as version 3.5. Again, as you would think, you can 
-change the version number (here 3.5) to be whatever version you need to support 
-the CMake commands you will be using.
+As you can imagine, this first line defines the *minimum required version of 
+CMake* we need to build this project as version 3.5. Again, as you would think, 
+you can change the version number (here 3.5) to be whatever version you need 
+to support the CMake commands you will be using.
 
 ```cmake
 project(HelloSimple CXX)
 ```
 
-This command specifies the *name* of the project, and the *language* of the
-project. I decided to go with the project name of `HelloSimple`. Since I am
+The second command specifies the *name* of the project and the *language* of 
+the project. I decided to go with the project name of `HelloSimple`. Since I am
 using C++, I wanted to specify that the language as being C++ by putting
 CXX as the next parameter.
 
@@ -115,7 +116,7 @@ CXX as the next parameter.
 set(CMAKE_CXX_STANDARD 14)
 ```
 
-The set command will set a *variable* to a given *value*. In this case, we are
+This third command sets a *variable* to a given *value*. In this case, we are
 setting one of CMake's known variables called `CMAKE_CXX_STANDARD`. This
 variable controls the C++ standard that should be used when compiling, and is
 equivalent to using the `-std=c++14` flag on g++. There are other ways to
