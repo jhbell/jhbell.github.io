@@ -48,7 +48,7 @@ do anything to teach you how to actually use the software. Once you figure out
 how to do what you want, however, CMake is a very valuable tool. CMake can
 make building and, even testing, a breeze and has some pretty sweet features.
 
-# How do I use CMake?
+# Basic CMake Usage
 
 CMake is run using files called `CMakeLists.txt`. Inside of these files is
 where you will specify the configuration options that you would normally use
@@ -72,10 +72,60 @@ We will start by creating our `CMakeLists.txt` file containing the follwing
 lines:
 
 ```cmake
-add_executable(Hello RunHello.cpp Hello.h Hello.cpp)
+cmake_minimum_required(VERSION 3.5)
+project(HelloSimple CXX)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(RunHello RunHello.cpp Hello.cpp)
 ```
 
-[cmake]:                https://cmake.org
-[cmake-tutorial]:       https://cmake.org/cmake-tutorial/
+Notice that each line looks like a call to a function. These "functions" can
+all be found in the [CMake documentation][cmake-commands], and are referred to
+as "commands".  Let's take a look at what each one of these commands means, 
+starting with the first line:
+
+```cmake
+cmake_minimum_required(VERSION 3.5)
+```
+
+As you can imagine, here we define the *minimum required version of CMake* we
+need to build this project as version 3.5. Again, as you would think, you can 
+change the version number (here 3.5) to be whatever version you need to support 
+the cmake commands you will be using.
+
+```cmake
+project(HelloSimple CXX)
+```
+
+This command specifies the *name* of the project, and the *language* of the
+project. I decided to go with the project name of `HelloSimple`. Since I am
+using C++, I wanted to specify that the language as being C++ by putting
+CXX as the next parameter.
+
+```cmake
+set(CMAKE_CXX_STANDARD 14)
+```
+
+The set command will set a *variable* to a given *value*. In this case, we are
+setting one of CMake's known variables called `CMAKE_CXX_STANDARD`. This
+variable controls the C++ standard that should be used when compiling, and is
+equivalent to using the `-std=c++14` flag on g++. There are other ways to
+specify the C++ standard, but this one I have found to be the most concise.
+The values 98, 11, or 14 can be used.
+
+```cmake
+add_executable(RunHello RunHello.cpp Hello.cpp)
+```
+
+The last line specifies the *name of the executable* to be created (-o flag on
+gcc/g++) and the *list of source files to compile*. Here we are naming the
+executable RunHello, and compiling the .cpp files `RunHello.cpp` and 
+`Hello.cpp` for the HelloSimple program.
+
+# Running CMake
+
+
+[cmake]:          https://cmake.org
+[cmake-tutorial]: https://cmake.org/cmake-tutorial/
+[cmake-commands]: https://cmake.org/cmake/help/v3.8/manual/cmake-commands.7.html
 
 [last-post]:    {{ site.baseurl }}{% post_url 2017-06-11-welcome-to-my-blog %}
