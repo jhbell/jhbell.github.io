@@ -14,7 +14,7 @@ manner.
 # Rationale
 
 There are plenty of people that talk about CMake, but when I was learning how
-to use it I struggled to find a *free*, cohesive source on building projects 
+to use it I struggled to find a cohesive *free* source on building projects 
 with CMake. This post is my attempt to create some helpful information on 
 getting started with CMake, and some clean ways I have discovered to use it.
 
@@ -137,7 +137,7 @@ Building your CMake project is now quite simple. Again, there are various ways
 to accomplish this task, but the following is what I have found to be easiest
 to remember.
 
-1. *Make a new directory* inside of your project folder. I, personally, like
+1. **Make a new directory** inside of your project folder. I, personally, like
 using the name `build` for this. Once this is done, the directory structure
 from before should look like this:
 
@@ -150,15 +150,15 @@ HelloSimple
 |-- RunHello.cpp
 ```
 
-2. *Change directories* into the newly created directory.
+2. **Change directories** into the newly created directory.
 
-3. *Execute the command `cmake ..`.* The CMake command line tool simply
-requires a path to the project source, or a path to a previous build. We
-obviously don't have a previous build, so we want to pass in the root directory
-for our project containing our highest level `CMakeLists.txt` file. This just
-so happens to be `..`.
+3. **Execute the cmake command** on your project direcotry. The CMake command 
+line tool simply requires a path to the project source, or a path to a previous 
+build. We obviously don't have a previous build, so we want to pass in the root 
+directory for our project which contains our highest level `CMakeLists.txt` 
+file. This command becomes `cmake ..` in our example.
 
-4. *Run make* in the build directory. The `cmake` command generates a 
+4. **Run make** in the build directory. The `cmake` command generates a 
 `Makefile` into your current directory. You will also notice a file called 
 `CMakeCache.txt` and a directory called `CMakeFiles`. The `CMakeCache.txt` file 
 is an editable file containing some defaults for your program's build process.
@@ -166,7 +166,7 @@ You can open this file to learn more about it. The `CMakeFiles` directory
 contains all of the sorcery done by CMake along with the binaries for
 each source file.
 
-5. *Run your program* as you normally would after a make. In this example, 
+5. **Run your program** as you normally would after a make. In this example, 
 I simply have to type `./RunHello` since RunHello is the name I gave to my
 executable using the `add_exectuable()` command above.
 
@@ -187,19 +187,20 @@ make
 
 # Closing Remarks
 
-As you can see, there is a lot to learn about CMake. Similar to using an IDE,
-the more you let the software do, the less you know about what is actually
-going on. If you want a platform independent build process, look no further, 
-this is about as simple as you can get. CMake is growing in popularity and is
-even the basis for JetBrains' [CLion][clion] IDE. If you already have a ton of 
-Makefiles that do exactly what you want, however, maybe switching your entire 
-project over to CMake isn't necessary.
+As you can see, there is a lot to learn about the fundamentals of CMake. CMake 
+is growing in popularity and is even the basis for 
+[JetBrains' CLion IDE][clion].  Similar to using an IDE, the more you let the 
+software do, the less you know about what is actually going on. That being 
+said, if you want a platform independent build process, look no further. This 
+is about as simple as you can get beyond clicking a green play button in an 
+IDE. If you already have a ton of Makefiles that do exactly what you want, 
+however, maybe switching your entire project over to CMake isn't necessary.
 
 In some future posts, I will go over creating more elaborate
 project setups with CMake where we will begin to see some of the features that
-makes CMake much easier to use than Makefiles. As we have already seen, we can
-use CMake to generate a fully equipped Makefile with just four commands. The
-future posts will go into more complex directory structures, including
+make CMake much easier to use than Makefiles. As we have already seen, we can
+use CMake to generate a fully equipped Makefile *with just four commands*. The
+future posts will go into more complex directory structures, how to include
 libraries, and testing with GoogleTest. Until then, happy hacking!
 
 
