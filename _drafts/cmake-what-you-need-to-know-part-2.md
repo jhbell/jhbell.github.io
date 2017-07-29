@@ -7,9 +7,21 @@ title:  "CMake: What You Need to Know - Part 2"
      style="width: 200px; height: 200px; padding-bottom: 25px" />  
 This post is the second part of a few posts that explain some basic usages of
 [CMake][cmake] that I have found to be clean and effective. This part will go
-over creating a multi-directory project and including other cmake projects and
-libraries. If you haven't read [part one][cmake-wyntk-p1], I would encourage
-you to do so as this is a continuation of that first post.
+over creating a multi-directory project and including libraries. If you haven't 
+read [part one][cmake-wyntk-p1], I would encourage you to do so as this is a 
+continuation of that first post.
+
+# Recap
+
+In my [last post][cmake-wyntk-p1] I talked about how we could set up a simple
+cmake project. I mentioned how CMake does a lot of the work for you, but hides
+most of the things that happen. 
+
+This can be both good and bad. For example,
+think of your favorite IDE. Most IDE's allow you to press a green play button
+which will automatically compile and run your program. This is great and has
+allowed for huge advancement
+this **The IDE Illusion**. 
 
 
 
