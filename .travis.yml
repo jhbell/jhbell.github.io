@@ -5,6 +5,5 @@ rvm:
 
 script: 
   - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site 
 
 sudo: false
