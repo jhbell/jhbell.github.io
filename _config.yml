@@ -17,7 +17,6 @@ title: Jeffrey H. Bell
 email: jeff@jhbell.com
 description: > # this means to ignore newlines until "baseurl:"
     My personal blog.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jeffreyhbell.com/blog" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
 github_username: jhbell
