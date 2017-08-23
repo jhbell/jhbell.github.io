@@ -25,13 +25,16 @@ to locate a library on the system for linking etc. CMake has a single-line
 command to do it. Read more about it [here][cmake].
 
 # Rationale
-Add related links and reasoning behind wanting to use Gcov in build process
+When using a coverage tool alongside a testing framework, it is very easy to
+see how much of your code is executed when you run your tests. This allows
+you to see if there are holes in your tests. 
+
+The goal of this project was to use CMake to build a simple program and run 
+a few tests. Then, have a target that exists where we can say `make gcov`
+to run `gcov` on our program and output the coverage data.
 
 # Putting It All Together
 Explain the project
-
-# Issues
-- cleaning
 
 
 [cmake]:      https://cmake.org
