@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Using CMake with Gcov"
+date:   2017-09-08 11:16:18 -0500
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 
@@ -21,8 +22,8 @@ If you haven't seen my [previous post][part-1] on an introduction to CMake,
 check it out. In a nutshell, CMake is a tool/language for cross-platform
 software builds in various languages. CMake attempts to remove some of the
 uncertainties that come with using Makefiles. For example, if you wanted
-to locate a library on the system for linking etc. CMake has a single-line 
-command to do it. Read more about it [here][cmake].
+to locate a library on the system for linking, CMake has a single-line 
+command to do it. Read more about CMake [here][cmake].
 
 # Rationale
 When using a coverage tool alongside a testing framework, it is very easy to
@@ -224,16 +225,16 @@ expecting, especially considering how few lines I ended up with.
 The largest problem I was unable to find a solution for was how to delete the 
 .gcno and .gcda files automatically when running the gcov target. I couldn't 
 find a way to clean up the old ones automatically before building the project. 
-Just about any way I tried it, the project would be built, and the newly 
-generated profiling files would be deleted. I was unable to clean before
-building. I suspect part of this comes from using the `add_dependencies()`
-CMake command to build the project before analyzing the coverage.
+Just about any way I tried it, the project would be built first, and *then* the 
+newly generated profiling files would be deleted causing an error. I suspect 
+part of this comes from using the `add_dependencies()` CMake command to build 
+the project before analyzing the coverage.
 
-The amount of time I had to spend on tiny details like this not working 
-make me want to run away from CMake and never look back. Overall, I am happy
+The amount of time I had to spend on tiny details like this makes me want to 
+run away from CMake and never look back. However, I am overall happy
 with how this turned out, but I wish that I could make it just a touch more
-elegant. Integrating tools like this really shows off how much more powerful
-and straight-forward GNU Makefiles are.
+elegant. Integrating tools like this really shows off how much more clean
+and straight-forward GNU Makefiles can be.
 
 In the future, I intend to integrate this with googletest to create a CMake
 project template. This would make it super easy to start a new C++ project
