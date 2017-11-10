@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to My Blog!"
 date:   2017-06-11 16:03:21 -0500
+category: blog
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 

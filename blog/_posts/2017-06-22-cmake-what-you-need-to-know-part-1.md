@@ -2,6 +2,7 @@
 layout: post
 title:  "CMake: What You Need to Know - Part 1"
 date:   2017-06-22 10:52:34 -500
+category: blog
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 

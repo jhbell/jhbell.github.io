@@ -2,6 +2,7 @@
 layout: post
 title:  "Using CMake with Gcov"
 date:   2017-09-08 11:16:18 -0500
+category: blog
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 
