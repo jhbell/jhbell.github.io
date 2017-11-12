@@ -212,4 +212,4 @@ libraries, and testing with GoogleTest. Until then, happy hacking!
 [clion]:          https://www.jetbrains.com/clion/
 
 [cmake-wyntk]:  https://github.com/jhbell/cmake-wyntk
-[last-post]:    {{ site.baseurl }}{% post_url 2017-06-11-welcome-to-my-blog %}
+[last-post]:    {{ site.baseurl }}{% post_url /blog/2017-06-11-welcome-to-my-blog %}
