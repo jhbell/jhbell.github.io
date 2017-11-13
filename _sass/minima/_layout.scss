@@ -18,10 +18,10 @@
   float: left;
 
   &,
-  &:visited {
+  &:visited,
+  &:hover {
     color: $grey-color-dark;
   }
-  &,
   &:hover{
     text-decoration: none;
   }
