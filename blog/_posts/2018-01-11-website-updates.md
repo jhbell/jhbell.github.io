@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Website Transition and December Updates"
-date:   2017-12-09 16:45:49 -500
+title:  "Website Transition and Updates"
+date:   2018-01-11 16:10:49 -500
 category: blog
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
@@ -70,3 +70,7 @@ to my original goal of having a website to show off my projects.
 I will continue to make updates to the blog about my progress and new things I
 learn.  I have one post in particular I've been working on for a while now that
 I hope to finish soon and get on here. Until then, happy hacking!
+
+[markdown]:     https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+[jhbell]:       http://jhbell.com
+[jeffreyhbell]: http://jeffreyhbell.com
