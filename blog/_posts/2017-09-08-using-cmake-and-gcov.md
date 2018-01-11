@@ -2,6 +2,7 @@
 layout: post
 title:  "Using CMake with Gcov"
 date:   2017-09-08 11:16:18 -0500
+category: blog
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 
@@ -243,5 +244,5 @@ that already has testing and coverage capabilites. Until then, happy hacking!
 [cmake]:      https://cmake.org
 [gcov-intro]: https://gcc.gnu.org/onlinedocs/gcc/Gcov-Intro.html
 [cmake-gcov]: https://github.com/jhbell/cmake-gcov
-[part-1]:     {{ site.baseurl }}{% post_url 2017-06-22-cmake-what-you-need-to-know-part-1 %}
-[last-post]:  {{ site.baseurl }}{% post_url 2017-06-11-welcome-to-my-blog %}
+[part-1]:     {{ site.baseurl }}{% post_url /blog/2017-06-22-cmake-what-you-need-to-know-part-1 %}
+[last-post]:  {{ site.baseurl }}{% post_url /blog/2017-06-11-welcome-to-my-blog %}

@@ -2,6 +2,7 @@
 layout: post
 title:  "CMake: What You Need to Know - Part 1"
 date:   2017-06-22 10:52:34 -500
+category: blog
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 
@@ -211,4 +212,4 @@ libraries, and testing with GoogleTest. Until then, happy hacking!
 [clion]:          https://www.jetbrains.com/clion/
 
 [cmake-wyntk]:  https://github.com/jhbell/cmake-wyntk
-[last-post]:    {{ site.baseurl }}{% post_url 2017-06-11-welcome-to-my-blog %}
+[last-post]:    {{ site.baseurl }}{% post_url /blog/2017-06-11-welcome-to-my-blog %}
