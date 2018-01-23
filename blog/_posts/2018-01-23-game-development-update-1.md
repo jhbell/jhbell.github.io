@@ -15,8 +15,8 @@ post weekly updates on the development of our game. Here's the first update!
 
 Our 3D game is being developed for the CS 354T course. The class consists of
 a couple of specific lecture class sessions and a 3 hour lab on Wednesday
-nights where we are able to spend some time with our team to talk about and
-work on our game.
+nights. This lab varies from presentations to playtests to time to work with
+our teams.
 
 Most of the class revolves around making the game. I am finding that most of
 the coursework is going to consist of working with my team to produce a high
