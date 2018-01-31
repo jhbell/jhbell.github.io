@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Game Development Update 2"
-date:   2018-01-23 13:17:49 -500
+date:   2018-01-30 23:47:21 -500
 category: blog
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
