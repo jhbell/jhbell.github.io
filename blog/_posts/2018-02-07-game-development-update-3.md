@@ -8,8 +8,11 @@ category: blog
      alt="Jeff Bell" 
      style="width: 200px; padding-bottom: 25px" />  
 We recently presented our work from the Global Game Jam. We put in a lot of
-hours on the game for our first game review and it was great to see how it all
-came together in our presentation to the class.
+hours on the game for our first game review and it was great to see how
+everything came together in our presentation to the class. Overall, it went
+really well.  One of our mechanics involved using a rock and a catapult to
+launch yourself up to the top of a building. We had never really done it
+successfully, but it magically worked in our demo in front of the class.
 
 # On Your Mark...
 
@@ -51,10 +54,13 @@ we can use as we move forward. Here's what we came up with for the map:
      style="width: 800; margin: 0 auto; display: block;" />  
 
 Our design attempts to take the linear progression of the game, getting 3
-abilities one after the other, and lay it out over an area that can also be
-used for sandbox play. For this week, we are still using a demo map that we
+abilities one after the other, and lays it out over an area that can also be
+used for sandbox play. The "mountain entrance" will be the entry point to
+the final level of the game. We have decided that the sandbox/tutorial area
+will be great as an MVP, so we will design the final challenges that will go
+into the mountain later. For this week, we are still using a demo map that we
 created during the game jam. Now that we have a design for the actual game's
-map, we will probably get started building it in our next sprint.
+map, we will likely get started building it in our next sprint.
 
 # What's Next
 
