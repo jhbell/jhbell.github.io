@@ -38,7 +38,7 @@ things to drive our game forward in the coming weeks.
 
 <img src="{{ site.url }}/assets/object-roll.gif" 
      alt="Jeff Bell" 
-     style="width: 800px; margin: 0 auto; display: block;" />
+     style="width: 600px; margin: 0 auto; display: block;" />
 
 Our new approach is to abandon a linear kind of game play. Our game will start
 with a **strict** tutorial, which forces the player to demonstrate the
