@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Designing a Particle-Based Waterfall Puzzle"
-date:   2018-03-21 01:39:23 -500
+date:   2018-03-23 23:26:28 -500
 category: blog
 ---
 <img src="{{ site.url }}/assets/jeff-web.jpg" 
