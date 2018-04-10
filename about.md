@@ -2,7 +2,7 @@
 title: About
 ---
 
-<img src="http://localhost:4000/assets/jeff-web.jpg" 
+<img src="{{ site.url }}/assets/jeff-web.jpg" 
      alt="Jeff Bell" 
      style="width: 200px; height: 200px; padding-bottom: 25px">
 
